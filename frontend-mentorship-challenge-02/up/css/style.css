@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+body .form-container {
+  width: calc(25rem + 10vw);
+  height: 45rem;
+  background-color: #f3f3f3;
+  padding: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .form-container h2 {
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  font-size: 2.25rem;
+  bottom: 1.5rem;
+}
+
+body .form-container h2::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-image: linear-gradient(135deg, #fccf31 10%, #f55555 100%);
+  -webkit-transform: scale(1.6) skew(-15deg);
+          transform: scale(1.6) skew(-15deg);
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"] {
+  padding: 0.5rem;
+  width: 100%;
+  border: none;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form .radio-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.25rem;
+}
+
+form .terms {
+  font-size: 1.5em;
+}
+
+form button {
+  margin-top: 1.5rem;
+  background-color: #f55555;
+  border: none;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+input[type="date"] {
+  position: relative;
+  text-transform: uppercase;
+  color: #111;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
