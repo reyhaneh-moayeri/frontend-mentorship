@@ -22,6 +22,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+  background-image: linear-gradient(135deg, #fec163 10%, #de4313 100%);
 }
 
 body .form-container {
@@ -115,13 +116,21 @@ form .terms {
 }
 
 form input[type="submit"] {
-  margin-top: 1.5rem;
   background-color: #f55555;
-  border: none;
+  border: 2px solid transparent;
   padding: 1rem 1.5rem;
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
+  width: 100%;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+  background-color: #f3f3f3;
+  border: 2px inset #f55555;
+  color: #111;
 }
 
 input[type="date"] {
