@@ -114,7 +114,7 @@ form .terms {
   font-size: 1.5em;
 }
 
-form button {
+form input[type="submit"] {
   margin-top: 1.5rem;
   background-color: #f55555;
   border: none;
