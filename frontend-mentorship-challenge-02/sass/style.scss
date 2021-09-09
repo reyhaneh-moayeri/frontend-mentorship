@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap");
+
+@import './reset';
 $colors: (
   "primaryColor": #f3f3f3,
   "lightColor": #fff,
@@ -8,16 +9,6 @@ $colors: (
 
 $fonts: 1.5rem;
 $mg: 1.5rem;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%;
-  font-family: "Roboto", sans-serif;
-}
 
 body {
   display: flex;
