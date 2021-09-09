@@ -1,5 +1,4 @@
-
-@import './reset';
+@import "./reset";
 $colors: (
   "primaryColor": #f3f3f3,
   "lightColor": #fff,
@@ -7,6 +6,9 @@ $colors: (
   "pinkColor": #f55555,
 );
 
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
 $fonts: 1.5rem;
 $mg: 1.5rem;
 
@@ -19,7 +21,7 @@ body {
   .form-container {
     width: calc(25rem + 10vw);
     height: 45rem;
-    background-color: map-get($colors, primaryColor);
+    background-color: color(primaryColor);
     padding: 4rem;
     display: flex;
     flex-direction: column;
@@ -74,7 +76,7 @@ form {
 
   .radio-btn {
     display: inline-flex;
-    background-color: map-get($colors, lightColor);
+    background-color: color(lightColor);
     padding: 1rem 2rem;
     gap: 1rem;
     align-items: center;
@@ -84,10 +86,10 @@ form {
     font-size: 1.5em;
   }
   input[type="submit"] {
-    background-color: map-get($colors, pinkColor);
+    background-color: color(pinkColor);
     border: 2px solid transparent;
     padding: 1rem 1.5rem;
-    color: map-get($colors, lightColor);
+    color: color(lightColor);
     font-size: 1.5rem;
     cursor: pointer;
     width: 100%;
@@ -95,8 +97,8 @@ form {
   }
 
   input[type="submit"]:hover {
-    background-color: map-get($colors, primaryColor);
-    border: 2px inset map-get($colors, pinkColor);
+    background-color: color(primaryColor);
+    border: 2px inset color(pinkColor);
     color: #111;
   }
 }
