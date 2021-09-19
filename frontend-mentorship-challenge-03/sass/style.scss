@@ -1,0 +1,30 @@
+@mixin media-tablet {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+@mixin media-small {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+@import "./reset";
+@import "./variables";
+@import "./header";
+@import "./main";
+
+body {
+  background: url("../img/background.png") no-repeat 50% 50%;
+  height: 100vh;
+  background-size: cover;
+  display: grid;
+  grid-template-columns:
+    [container-start] 1fr [center-start] repeat(
+      6,
+      [col-start] minmax(min-content, 16.6667rem) [col-end]
+    )
+    [center-end] 1fr [container-end];
+
+  grid-template-rows: min-content 90vh;
+}
