@@ -27,7 +27,7 @@
       <form action="" class="form-group">
         <div class="region">
           <label for="">Where You Go?</label>
-          <select name="" id="region-selection">
+          <select name="" id="region-selection" required>
             <option value="select a region">Select a Region</option>
             <option value="select a region">Select a Region</option>
             <option value="select a region">Select a Region</option>
@@ -35,16 +35,18 @@
         </div>
         <div class="checkin">
           <label>Check In</label>
-          <input type="date" required />
+          <input type="date" required class="check-in" />
         </div>
         <div class="checkout">
           <label for="">Check Out</label>
-          <input type="date" required />
+          <input type="date" required class="check-out" />
         </div>
         <div class="search">
-          <button><i class="fas fa-search"></i></button>
+          <button class="btn"><i class="fas fa-search"></i></button>
         </div>
       </form>
     </main>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>
