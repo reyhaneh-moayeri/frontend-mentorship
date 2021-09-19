@@ -10,10 +10,12 @@ searchBtn.addEventListener('click', (e) => {
     e.preventDefault()
 
     console.log(dateIn.value < dateOut.value);
-        if(dateIn.value < dateOut.value){
-        alert("Successful!");
-    }
-    else{
-        alert("dates are wrong! Please select the correct dates.")
+    if (dateIn.value && dateOut.value) {
+        if (dateIn.value < dateOut.value) {
+            alert("Successful!");
+        }
+        else {
+            alert("dates are wrong! Please select the correct dates.")
+        }
     }
 })
