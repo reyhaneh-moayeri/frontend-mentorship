@@ -50,6 +50,14 @@ html {
   color: var(--color-primary);
 }
 
+@media screen and (max-width: 400px) {
+  .header-title {
+    letter-spacing: 0;
+    padding: 0.5rem;
+    flex-shrink: 0;
+  }
+}
+
 main {
   grid-column: container-start / container-end;
   display: grid;
@@ -167,6 +175,10 @@ main .form-group .search button i {
     border-right: 0 !important;
     border-bottom: 2px solid var(--color-gray);
   }
+  main .form-group div:nth-child(2),
+  main .form-group div:nth-child(3) {
+    padding-bottom: 5rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -181,6 +193,6 @@ body {
   background-size: cover;
   display: grid;
   grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.6667rem) [col-end]) [center-end] 1fr [container-end];
-  grid-template-rows: min-content 90vh;
+  grid-template-rows: min-content;
 }
 /*# sourceMappingURL=style.css.map */

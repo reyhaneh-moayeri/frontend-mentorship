@@ -30,4 +30,12 @@
     background-color: var(--color-tertiary);
     color: var(--color-primary);
   }
+
+  @include media-small {
+    &-title {
+      letter-spacing: 0;
+      padding: 0.5rem;
+      flex-shrink: 0;
+    }
+  }
 }
