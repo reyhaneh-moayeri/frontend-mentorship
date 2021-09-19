@@ -73,6 +73,64 @@ main .form-group {
 main .form-group div {
   padding: 1rem;
   width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+main .form-group div input {
+  position: absolute;
+  border: none;
+  background: transparent;
+  width: 100%;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  bottom: -0.8rem;
+}
+
+main .form-group div input::after {
+  position: absolute;
+  content: "Add a date";
+  left: 50%;
+  transform: translateX(-50%);
+  color: #969393;
+  z-index: -1;
+}
+
+main .form-group div input:focus {
+  outline: none;
+  border: none;
+}
+
+main .form-group div input[type="date"]::-webkit-inner-spin-button,
+main .form-group div input[type="date"]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+main .form-group div input[type="date"]::-webkit-datetime-edit-text {
+  -webkit-appearance: none;
+  display: none;
+}
+
+main .form-group div input[type="date"]::-webkit-datetime-edit-month-field {
+  -webkit-appearance: none;
+  display: none;
+}
+
+main .form-group div input[type="date"]::-webkit-datetime-edit-day-field {
+  -webkit-appearance: none;
+  display: none;
+}
+
+main .form-group div input[type="date"]::-webkit-datetime-edit-year-field {
+  -webkit-appearance: none;
+  display: none;
 }
 
 main .form-group div:nth-child(1),
@@ -85,6 +143,7 @@ main .form-group label {
   text-align: center;
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  display: block;
 }
 
 main .form-group select {
